@@ -5,6 +5,193 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | EHS Resources, LLC</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav {
+      background: #093154;
+      color: #eaf0f6;
+      box-shadow: 0 4px 22px rgba(7,26,44,0.55);
+      padding: 12px 0 4px 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .site-title {
+      color: #13a05a;
+      font-weight: 900;
+      font-size: 4.5em;
+      letter-spacing: 0.14em;
+      margin: 0.4em 0 0.1em 0;
+      text-align: center;
+      font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+      background: none !important;
+      text-shadow: 0 0 3px #13a05a33;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.4em;
+      padding: 0;
+      margin: 10px 0 10px 0;
+    }
+    nav ul li {
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      display: inline-block;
+      font-size: 1.18em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+      color: #093154;
+      padding: 0.6em 1.7em;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px #5ef7b266, 0 1px 2px #00ff7b44;
+      border: none;
+      text-decoration: none;
+      transition:
+        background 0.18s cubic-bezier(.4,2,.5,1),
+        color 0.18s,
+        box-shadow 0.18s,
+        transform 0.12s;
+      position: relative;
+      z-index: 1;
+    }
+    nav ul li a.active,
+    nav ul li a:focus,
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+      color: #093154;
+      box-shadow: 0 6px 22px #5ef7b2cc, 0 1px 8px #00ff7b77;
+      transform: scale(1.08);
+      outline: none;
+      text-shadow: 0 0 6px #5ef7b2cc, 0 0 2px #00ff7b99;
+    }
+    @media (max-width: 900px) {
+      .site-title { font-size: 2.8em; }
+      nav ul {
+        gap: 1.1em;
+        margin: 8px 0 8px 0;
+      }
+      nav ul li a {
+        font-size: 1em;
+        padding: 0.5em 0.7em;
+        width: 97%;
+        text-align: center;
+      }
+    }
+    @media (max-width: 700px) {
+      .site-title { font-size: 1.5em; }
+      nav ul {
+        flex-direction: column;
+        gap: 0.7em;
+        margin: 5px 0 5px 0;
+      }
+      nav ul li a {
+        width: 98%;
+        font-size: 0.98em;
+        padding: 0.3em 0;
+        text-align: center;
+      }
+    }
+    .contact-container {
+      max-width: 950px;
+      margin: 2.7rem auto;
+      padding: 0 1.2rem;
+    }
+    .contact-hero {
+      background: linear-gradient(90deg, #093154ee 65%, #0197a6cc 100%);
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 4px 25px #00f0ff33;
+      padding: 2.2rem 1.8rem 1.3rem 1.8rem;
+      text-align: center;
+      color: #eaf0f6;
+      position: relative;
+    }
+    .contact-title {
+      color: #5ef7b2;
+      font-size: 2em;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      margin-top: 0;
+      margin-bottom: 0.7em;
+      text-shadow: 0 3px 12px #00f0ff44;
+      border-left: 6px solid #5ef7b2;
+      padding-left: 0.7em;
+      display: inline-block;
+      background: none;
+    }
+    .contact-subtitle {
+      font-size: 1.21em;
+      font-weight: 700;
+      color: #5ef7b2;
+      margin-bottom: 1em;
+      text-shadow: none;
+    }
+    .contact-hero p {
+      font-size: 1.15em;
+      color: #eaf0f6;
+      margin-bottom: 1.6em;
+    }
+    .glow-highlight {
+      color: #eaf0f6;
+      text-shadow: 0 0 2px #5ef7b255;
+      font-weight: 900;
+    }
+    .jotform-embed {
+      background: #172b3d;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 6px 35px #0197a655;
+      padding: 2.1rem 1.8rem 2rem 1.8rem;
+      color: #eaf0f6;
+      margin-top: 0;
+      margin-bottom: 2em;
+    }
+    @media (max-width: 900px) {
+      .site-title { font-size: 2.8em; }
+      nav ul {
+        gap: 1.1em;
+        margin: 8px 0 8px 0;
+      }
+      nav ul li a {
+        font-size: 1em;
+        padding: 0.5em 0.7em;
+        width: 97%;
+        text-align: center;
+      }
+      .contact-hero, .jotform-embed { padding: 1.3em 0.7em 1.2em 0.7em; }
+    }
+    @media (max-width: 700px) {
+      .site-title { font-size: 1.5em; }
+      nav ul {
+        flex-direction: column;
+        gap: 0.7em;
+        margin: 5px 0 5px 0;
+      }
+      nav ul li a {
+        width: 98%;
+        font-size: 0.98em;
+        padding: 0.3em 0;
+        text-align: center;
+      }
+      .jotform-embed { padding: 1em 0.4em 1.2em 0.4em;}
+      .contact-container { padding: 0 0.2em;}
+    }
+    footer {
+      margin-top: 2.5rem;
+      background: none;
+      color: #eaf0f6;
+      border-top: 2px solid #5ef7b2;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
   <header>
@@ -18,17 +205,32 @@
       </ul>
     </nav>
   </header>
-  <main class="contact-main">
-    <section>
-      <h1>Contact Us</h1>
-      <p>Have questions or want to request a service? Use the form below and we'll get back to you soon!</p>
-      <iframe id="JotFormIFrame-252676232419157" title="EHS Resources Contact Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252676232419157" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no" ></iframe>
-      <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-      <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252676232419157']", "https://form.jotform.com/")</script>
-    </section>
+  <main>
+    <div class="contact-container">
+      <section class="contact-hero">
+        <div class="contact-title">Contact: EHS Resources, LLC</div>
+        <div class="contact-subtitle">
+          Ready to protect your people and environment? Let's talk.
+        </div>
+        <p>
+          <strong class="glow-highlight">EHS Resources, LLC</strong> is committed to providing responsive support and practical solutions for your environmental, health, and safety needs.
+        </p>
+      </section>
+      <section class="jotform-embed">
+        <!-- Replace the src below with your actual JotForm embed link -->
+        <iframe
+          id="JotFormIFrame"
+          title="Contact EHS Resources, LLC"
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allowfullscreen="true"
+          allow="geolocation; microphone; camera"
+          src="https://form.jotform.com/your-jotform-id"
+          frameborder="0"
+          style="min-width:100%;max-width:100%;height:600px;border:none;overflow:hidden;"
+        ></iframe>
+      </section>
+    </div>
   </main>
-  <footer>
-    &copy; 2025 EHS Resources, LLC. All rights reserved.
-  </footer>
 </body>
 </html>
