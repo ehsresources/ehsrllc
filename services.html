@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services | EHS Resources, LLC</title>
+  <title>Services | EHS Resources, LLC</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -12,25 +12,24 @@
       margin: 0;
       padding: 0;
     }
-    .container {
-      max-width: 950px;
-      margin: 2.7rem auto;
-      padding: 0 1.2rem;
+    header, nav {
+      background: #093154;
+      color: #eaf0f6;
+      box-shadow: 0 4px 22px rgba(7,26,44,0.55);
+      padding: 12px 0 4px 0;
+      text-align: center;
+      margin-bottom: 20px;
     }
     .site-title {
-      color: #5ef7b2;
+      color: #13a05a;
       font-weight: 900;
       font-size: 4.5em;
       letter-spacing: 0.14em;
-      margin: 0.7em 0 0.3em 0;
+      margin: 0.4em 0 0.1em 0;
       text-align: center;
       font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
       background: none !important;
-      -webkit-background-clip: unset !important;
-      -webkit-text-fill-color: unset !important;
-      text-shadow:
-        0 0 18px #5ef7b2,
-        0 0 40px #5ef7b2;
+      text-shadow: 0 0 3px #13a05a33;
     }
     nav ul {
       list-style: none;
@@ -38,7 +37,7 @@
       justify-content: center;
       gap: 2.4em;
       padding: 0;
-      margin: 32px 0 32px 0;
+      margin: 10px 0 10px 0;
     }
     nav ul li {
       margin: 0;
@@ -52,7 +51,7 @@
       letter-spacing: 0.09em;
       background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
       color: #093154;
-      padding: 0.8em 2.1em;
+      padding: 0.6em 1.7em;
       border-radius: 16px;
       box-shadow: 0 4px 14px #5ef7b266, 0 1px 2px #00ff7b44;
       border: none;
@@ -76,50 +75,51 @@
       text-shadow: 0 0 6px #5ef7b2cc, 0 0 2px #00ff7b99;
     }
     @media (max-width: 900px) {
+      .site-title { font-size: 2.8em; }
       nav ul {
         gap: 1.1em;
-        margin: 22px 0 16px 0;
+        margin: 8px 0 8px 0;
       }
       nav ul li a {
         font-size: 1em;
-        padding: 0.7em 0.7em;
+        padding: 0.5em 0.7em;
         width: 97%;
         text-align: center;
       }
-      .site-title {
-        font-size: 2.8em;
-      }
     }
     @media (max-width: 700px) {
+      .site-title { font-size: 1.5em; }
       nav ul {
         flex-direction: column;
         gap: 0.7em;
-        margin: 10px 0 8px 0;
+        margin: 5px 0 5px 0;
       }
       nav ul li a {
         width: 98%;
         font-size: 0.98em;
-        padding: 0.5em 0;
+        padding: 0.3em 0;
         text-align: center;
       }
-      .site-title {
-        font-size: 1.5em;
-      }
+    }
+    .services-container {
+      max-width: 950px;
+      margin: 2.7rem auto;
+      padding: 0 1.2rem;
     }
     .maincard {
       background: #172b3d;
       border-radius: 20px;
       box-shadow: 0 6px 35px #0197a655;
       padding: 2.1rem 1.8rem 2rem 1.8rem;
-      margin-bottom: 2em;
       color: #eaf0f6;
+      margin-bottom: 2em;
     }
     .section-title {
       color: #5ef7b2;
       font-size: 1.6em;
       font-weight: 900;
       letter-spacing: 0.11em;
-      margin-top: 1.7em;
+      margin-top: 0;
       margin-bottom: 0.36em;
       text-shadow: 0 3px 12px #00f0ff44;
       border-left: 6px solid #5ef7b2;
@@ -194,6 +194,15 @@
       box-shadow: 0 6px 20px #5ef7b2cc;
       transform: scale(1.04);
     }
+    @media (max-width: 900px) {
+      .maincard { padding: 1.3em 0.7em 1.2em 0.7em; }
+      .services-container { padding: 0 0.7em; }
+    }
+    @media (max-width: 700px) {
+      .maincard { padding: 1em 0.4em 1.2em 0.4em;}
+      .services-container { padding: 0 0.2em;}
+      .section-title { font-size: 1.15em; }
+    }
     footer {
       margin-top: 2.5rem;
       background: none;
@@ -215,9 +224,12 @@
     </nav>
   </header>
   <main>
-    <div class="container">
+    <div class="services-container">
       <section class="maincard">
-        <div class="section-title">Our Services</div>
+        <div class="section-title">Our Services: EHS Resources, LLC</div>
+        <div class="section-text">
+          Protecting People. Preserving the Environment. Driving Compliance.
+        </div>
         <div class="section-text">
           EHS Resources, LLC offers a comprehensive suite of environmental, health, and safety services designed to help your organization thrive. Our team brings decades of expertise and a practical, hands-on approach to every project.
         </div>
