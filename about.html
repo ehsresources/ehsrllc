@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | EHS Resources, LLC</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900|Oswald:700|Roboto:400,500,700&display=swap" rel="stylesheet">
   <style>
     body {
       background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
@@ -70,228 +71,176 @@
       margin: 2.7rem auto;
       padding: 0 1.2rem;
     }
-    /* Top card styling */
-    .about-hero {
-      background: linear-gradient(105deg, #093154 65%, #01bfa6 100%);
-      border-radius: 22px 22px 0 0;
-      box-shadow: 0 2px 12px #00f0ff22;
-      padding: 2.2rem 1.8rem 1.3rem 1.8rem;
-      margin-bottom: 0;
-      text-align: left;
-      color: #eaf0f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .hero-content-box {
-      background: linear-gradient(135deg, #00f0ff15 60%, #5ef7b215 100%);
-      border-left: 8px solid #00f0ff;
-      box-shadow: 0 2px 12px #00f0ff22;
-      border-radius: 16px;
-      padding: 2em 1.6em 1.7em 1.6em;
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-content-box h2 {
-      font-size: 2em;
-      font-weight: 900;
-      color: #00f0ff;
-      margin-bottom: 0.25em;
-      letter-spacing: 0.08em;
-      background: none;
-      text-shadow: none;
-    }
-    .hero-content-box p {
-      font-size: 1.13em;
-      color: #eaf0f6;
-      line-height: 1.7;
-      font-weight: 500;
-      margin: 0 0 0.8em 0;
-    }
-    .hero-content-box span {
-      color: #5ef7b2;
-      font-weight: 700;
-    }
-    /* Section Titles */
-    .about-section-title {
-      color: #00f0ff;
-      font-size: 1.7em;
-      font-weight: 900;
-      border-left: 9px solid #5ef7b2;
-      padding-left: 0.7em;
-      letter-spacing: 0.09em;
-      margin-top: 2.1em;
-      margin-bottom: 0.7em;
-      background: none;
-      text-align: left;
-      position: relative;
-      z-index: 2;
-      text-shadow: none;
-    }
-    /* What Sets Us Apart Cards */
-    .about-apart-row {
+    .about-us-flex {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-      margin: 2em 0 1.5em 0;
-      position: relative;
-      z-index: 2;
+      gap: 1.6em;
+      justify-content: space-between;
+      margin-bottom: 2.2em;
     }
-    .apart-card {
-      flex: 1 1 370px;
-      min-width: 270px;
-      max-width: 490px;
-      background: linear-gradient(120deg, #00f0ff12 70%, #5ef7b212 100%);
-      border-left: 9px solid #5ef7b2;
-      border-radius: 16px;
-      box-shadow: 0 2px 16px #00f0ff44;
-      padding: 1.4em 1.1em 1.1em 1.5em;
-      margin-bottom: 0;
-      position: relative;
-      text-align: left;
-      color: #fff;
-      font-size: 1.08em;
-      font-weight: 600;
-      z-index: 2;
-      overflow: hidden;
-      transition: box-shadow 0.16s, transform 0.12s;
+    @media (max-width: 900px) {
+      .about-us-flex { flex-direction: column; gap: 1.2em; }
     }
-    .apart-card h2 {
-      color: #00f0ff;
-      font-size: 1.18em;
-      font-weight: 900;
-      margin-bottom: 0.18em;
-      letter-spacing: 0.07em;
-      text-shadow: none;
-      background: none;
-    }
-    .apart-card:hover {
-      box-shadow: 0 8px 28px #00f0ff55, 0 2px 10px #13a05a44;
-      transform: scale(1.02);
-      z-index: 3;
-    }
-    /* Mission Box */
-    .about-mission-box {
-      background: linear-gradient(90deg, #00f0ff 18%, #0197a6 90%);
-      color: #fff;
-      border-left: 10px solid #093154;
+    .about-hero-box {
+      background: linear-gradient(120deg, #093154 62%, #13a05a 100%);
       border-radius: 18px;
-      padding: 1.6em 1.3em 1.3em 1.8em;
-      margin: 2.2em auto 2em auto;
-      font-size: 1.18em;
-      font-weight: 700;
-      box-shadow: 0 3px 18px #00f0ff33;
-      text-shadow: none;
-      max-width: 800px;
-      text-align: center;
-      position: relative;
-      z-index: 3;
-      border-top: 1px solid #5ef7b2;
-      border-bottom: 1px solid #5ef7b2;
-      overflow: hidden;
-    }
-    .about-mission-box strong {
-      font-size: 1.13em;
-      color: #093154;
-      letter-spacing: 0.03em;
-      font-weight: 900;
-      display: block;
-      margin-bottom: 0.5em;
-      padding-top: 0.2em;
-      background: none;
-      text-shadow: none;
-    }
-    .about-mission-box .mission-points {
-      text-align: left;
-      margin: 1em auto 1em auto;
-      display: inline-block;
-      padding: 0 1em;
-    }
-    .about-mission-box .mission-points li {
-      padding-bottom: 0.5em;
-      color: #fff;
-      font-size: 1.09em;
-      font-weight: 600;
-      list-style: disc inside;
-      text-shadow: none;
-    }
-    .about-mission-box .mission-footer {
-      margin-top: 1em;
-      font-weight: 700;
-      color: #093154;
-      font-size: 1.07em;
-      text-shadow: none;
-      background: none;
-    }
-    .about-maincard {
-      background: #172b3d;
-      border-radius: 0 0 16px 16px;
-      box-shadow: 0 4px 18px #0197a633;
-      padding: 2.1rem 1.8rem 2rem 1.8rem;
-      margin-bottom: 2em;
+      box-shadow: 0 4px 24px #09315444;
+      padding: 1.5em 2em 1.2em 2em;
       color: #eaf0f6;
-      position: relative;
-      z-index: 0;
-      overflow: visible;
+      margin-bottom: 2em;
+      border: none;
     }
-    .about-cta {
+    .about-hero-title {
+      font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+      font-size: 2.3em;
+      font-weight: 900;
+      color: #b5e6d3;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.8em;
+      text-shadow: 0 2px 12px #093154cc;
+    }
+    .about-hero-box span {
+      color: #13a05a;
+      font-weight: 700;
+    }
+    .about-hero-intro {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 1.25em;
+      font-weight: 400;
+      line-height: 1.63;
+      color: #eaf0f6;
+      margin-bottom: 0;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 8px #09315433;
+    }
+    .about-hero-highlight {
+      color: #5ef7b2;
+      background: none;
+      font-weight: 700;
+      font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+      font-size: 1.05em;
+      display: inline-block;
+      letter-spacing: 0.01em;
+      text-shadow: 0 0 8px #5ef7b233, 0 1px 8px #09315433;
+      margin: 0.5em 0;
+    }
+    .about-card {
+      flex: 1 1 340px;
+      background: linear-gradient(120deg, #093154 75%, #0197a6 100%);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #09315429;
+      padding: 1em 1.2em 0.8em 1.2em;
+      color: #b5e6d3;
+      min-width: 260px;
+      max-width: 520px;
+      border: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 0;
+    }
+    .about-card h2 {
+      font-size: 1.13em;
+      font-weight: 900;
+      color: #5ef7b2;
+      margin-bottom: 0.25em;
+      letter-spacing: 0.06em;
+      font-family: 'Oswald', Arial, sans-serif;
+    }
+    .about-card.specialized-expertise p {
+      font-size: 1.06em;
+      color: #eaf0f6;
+      margin: 0.4em 0 0.2em 0;
+      line-height: 1.55;
+      font-family: 'Montserrat', Arial, sans-serif;
       text-align: center;
-      margin-top: 2.2em;
+      letter-spacing: 0.01em;
+    }
+    .about-card.specialized-expertise span {
+      color: #5ef7b2;
+      font-weight: 900;
+      font-family: 'Oswald', Arial, sans-serif;
+    }
+    /* --- Empowerment glowing sentence: Roboto, green, crisp --- */
+    .empowerment-glow {
+      font-size: 1.12em;
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #13a05a;
+      text-shadow:
+        0 0 6px #13a05a55,
+        0 0 10px #09315444,
+        0 0 2px #5ef7b2;
+      font-weight: 500;
+      margin-bottom: 0.5em;
+      display: block;
+      letter-spacing: 0.01em;
+      padding: 0.09em 0;
+      text-align: center;
+    }
+    /* --- Mission Statement --- */
+    .about-mission-highlight-v3 {
+      background: linear-gradient(120deg, #093154 70%, #13a05a 100%);
+      border-radius: 18px;
+      box-shadow: 0 2px 18px #09315499;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 900;
+      padding: 1.7em 2em 1.3em 2em;
+      margin: 0 auto 1.2em auto;
+      max-width: 690px;
+      text-align: center;
+      border-top: 2px solid #0197a6;
+      border-bottom: 2px solid #13a05a;
+      letter-spacing: 0.03em;
+    }
+    .mission-line {
+      font-size: 1.13em;
+      margin-bottom: 1.05em;
+      line-height: 1.5;
+      color: #5ef7b2;
+      text-shadow: 0 1px 8px #09315433;
+    }
+    .mission-accent-green {
+      color: #13a05a;
+      font-weight: 900;
+    }
+    .mission-accent-blue {
+      color: #00f0ff;
+      font-weight: 900;
+    }
+    .about-mission-footer {
+      font-size: 1.03em;
+      color: #5ef7b2;
+      font-weight: 700;
+      margin-top: 1.5em;
+      text-shadow: 0 1px 6px #09315466;
     }
     .about-cta-btn {
       display: inline-block;
-      background: linear-gradient(90deg, #00f0ff 0%, #5ef7b2 100%);
-      color: #093154;
-      padding: 1em 2.6em;
+      background: linear-gradient(90deg, #13a05a 0%, #093154 100%);
+      color: #eaf0f6;
+      padding: 0.7em 2em;
       border-radius: 12px;
-      font-size: 1.09em;
+      font-size: 1em;
       font-weight: 900;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
       text-decoration: none;
-      margin-top: 0.7em;
-      box-shadow: 0 2px 8px #00f0ff33;
+      margin-top: 1em;
+      box-shadow: 0 2px 12px #0197a644;
       border: none;
       transition: background 0.18s, color 0.18s, box-shadow 0.18s;
     }
     .about-cta-btn:hover, .about-cta-btn:focus {
-      background: linear-gradient(90deg, #5ef7b2 0%, #00f0ff 100%);
-      color: #093154;
-      box-shadow: 0 4px 16px #5ef7b2cc;
-    }
-    @media (max-width: 900px) {
-      .about-apart-row {
-        flex-direction: column;
-        gap: 1.1em;
-      }
-      .apart-card {
-        margin-bottom: 0.9em;
-      }
-      .about-mission-box {
-        margin-top: 1.3em;
-      }
-      .about-maincard { padding: 1.3em 0.7em 1.2em 0.7em; }
-      .about-container { padding: 0 0.7em; }
-      .about-hero { padding: 1.2rem 0.7rem 0.8rem 0.7rem;}
-      .hero-content-box { padding: 1.2em 1em 1em 1em; }
-    }
-    @media (max-width: 700px) {
-      .about-container { padding: 0 0.2em;}
-      .about-hero { padding: 1.2rem 0.4rem 0.8rem 0.4rem;}
-      .about-maincard { padding: 1.1em 0.4em 1.2em 0.4em;}
-      .hero-content-box { min-width: 90vw; max-width: 98vw; padding: 1.2em 0.7em 1em 0.7em;}
-      .about-section-title { font-size: 1.2em; }
-      .apart-card { min-width: 90vw; max-width: 98vw; }
+      background: linear-gradient(90deg, #093154 0%, #13a05a 100%);
+      color: #5ef7b2;
+      box-shadow: 0 4px 16px #093154cc;
     }
     footer {
       margin-top: 2.5rem;
       background: none;
       color: #eaf0f6;
       border-top: 2px solid #5ef7b2;
+      text-align: center;
+      padding: 1.2em 0 1em 0;
+      font-size: 1.02em;
+      font-family: 'Montserrat', Arial, sans-serif;
     }
   </style>
 </head>
@@ -310,45 +259,58 @@
   <main>
     <div class="about-container">
 
-      <section class="about-hero">
-        <div class="hero-content-box">
-          <h2>Practical. Proactive. Local.</h2>
-          <p>
-            At EHS Resources, LLC, we deliver solutions that help organizations meet environmental, health, and safety responsibilities with confidence.<br>
-            <span>Founded in Florida</span>, we tailor consulting and training to the unique needs of your industry—because compliance and safety are never one-size-fits-all.<br>
-            We focus on targeted assessments, hands-on training, and actionable programs so your business can protect its workforce, safeguard communities, and keep up with evolving regulations.<br>
-            From stormwater and air quality to workplace hazard evaluations, our technical expertise and real-world experience set us apart.
-          </p>
+      <!-- About Us Section Start -->
+      <section class="about-hero-box">
+        <div class="about-hero-title">Practical. Proactive. Local.</div>
+        <div class="about-hero-intro">
+          At EHS Resources, LLC, we deliver solutions that help organizations meet environmental, health, and safety responsibilities with confidence.<br>
+          <span class="about-hero-highlight">Founded in Florida, we tailor consulting and training to the unique needs of your industry—because compliance and safety are never one-size-fits-all.</span><br>
+          We focus on targeted assessments, hands-on training, and actionable programs so your business can protect its workforce, safeguard communities, and keep up with evolving regulations.<br>
+          From stormwater and air quality to workplace hazard evaluations, our technical expertise and real-world experience set us apart.
         </div>
       </section>
 
-      <section class="about-maincard">
-        <div class="about-section-title">What Sets Us Apart</div>
-        <div class="about-apart-row">
-          <div class="apart-card">
-            <h2>Specialized Expertise, Flexible Model</h2>
-            Our flexible model combines in-house expertise with a network of specialized professionals engaged on a project-by-project basis. This ensures that every client receives the right knowledge and certifications for the job, without unnecessary overhead or generic "off-the-shelf" solutions.
-          </div>
-          <div class="apart-card">
-            <h2>Empowerment, Not Dependency</h2>
-            Even more importantly, we want to help you become self-sufficient. The programs, procedures, assessments, results, and material we create for you are all yours at the completion of the project. We believe in empowering our clients, not locking them into ongoing dependency.
-          </div>
+      <div class="about-us-flex">
+        <div class="about-card specialized-expertise">
+          <h2>Specialized Expertise</h2>
+          <p>
+            <span>We build teams for your needs.</span> Our in-house experts and network of certified professionals deliver targeted solutions—no generic packages, no wasted resources. Every project is tailored for your goals, so you get the right knowledge, support, and results, every time.
+          </p>
         </div>
-        <div class="about-mission-box">
-          <strong>Our Mission</strong>
-          <ul class="mission-points">
-            <li>Protect people by identifying and reducing workplace risks.</li>
-            <li>Preserve the environment by guiding companies toward sustainable, compliant practices.</li>
-            <li>Provide value through clear, actionable guidance that strengthens operations rather than complicates them.</li>
-          </ul>
-          <div class="mission-footer">
-            Whether you need a customized training program, a detailed sampling plan, or a comprehensive safety audit, <span style="color:#00f0ff;font-weight:900;">EHS Resources, LLC</span> is your partner in building safer, more resilient workplaces.
+        <div class="about-card">
+          <h2>Empowerment, Not Dependency</h2>
+          <div>
+            Even more importantly, we want to help you become self-sufficient.
+          </div>
+          <span class="empowerment-glow">
+            The programs, procedures, assessments, results, and material we create for you are all yours at the completion of the project.
+          </span>
+          <div>
+            We believe in empowering our clients, not locking them into ongoing dependency.
           </div>
         </div>
-        <div class="about-cta">
-          <a href="contact.html" class="about-cta-btn">Get in Touch</a>
+      </div>
+
+      <div class="about-mission-highlight-v3">
+        <div class="mission-line">
+          <span class="mission-accent-green">Protect people</span> by <span class="mission-accent-blue">identifying</span> and <span class="mission-accent-green">reducing workplace risks</span>.
         </div>
-      </section>
+        <div class="mission-line">
+          <span class="mission-accent-green">Preserve the environment</span> by guiding companies toward <span class="mission-accent-blue">sustainable</span>, <span class="mission-accent-green">compliant practices</span>.
+        </div>
+        <div class="mission-line">
+          <span class="mission-accent-blue">Provide value</span> through clear, actionable guidance that strengthens operations—never complicates them.
+        </div>
+        <div class="about-mission-footer" style="margin-top:1.6em;">
+          Whether you need a customized training program, a detailed sampling plan, or a comprehensive safety audit,<br>
+          <span style="color:#5ef7b2;font-weight:900;">EHS Resources, LLC</span> is your partner in building safer, more resilient workplaces.
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="contact.html" class="about-cta-btn">Get in Touch</a>
+      </div>
+      <!-- About Us Section End -->
     </div>
   </main>
   <footer>
