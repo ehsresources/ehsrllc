@@ -1,0 +1,145 @@
+:root {
+  --dark-green: #223b2f;
+  --blue: #4973a8;
+  --light-gray: #f6f9f9;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--light-gray);
+  color: var(--dark-green);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--white);
+  padding: 12px 0;
+  border-bottom: 2px solid var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo {
+  height: 56px;
+  margin-left: 32px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin-right: 32px;
+}
+
+nav a {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto 24px auto;
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(73, 115, 168, 0.08);
+}
+
+.hero {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 16px;
+  color: var(--dark-green);
+}
+
+.hero p {
+  font-size: 1.15em;
+  margin-bottom: 28px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 1.15em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background: var(--dark-green);
+}
+
+.services-list {
+  list-style: disc inside;
+  margin: 16px 0 0 0;
+  font-size: 1.1em;
+  color: var(--dark-green);
+}
+
+.services-list li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 32px;
+  font-size: 1em;
+  border-radius: 0 0 12px 12px;
+}
+
+@media (max-width: 700px) {
+  header, main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    margin-left: 12px;
+    height: 42px;
+  }
+  nav ul {
+    gap: 12px;
+    margin-right: 12px;
+  }
+  main {
+    padding: 16px 5vw;
+  }
+}
