@@ -154,41 +154,25 @@
       margin-top: 0;
       margin-bottom: 2em;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .jotform-embed iframe {
       border-radius: 8px;
       box-shadow: 0 2px 18px #00ff7b33;
       background: #0a2233;
-    }
-    @media (max-width: 900px) {
-      .site-title { font-size: 2.8em; }
-      nav ul {
-        gap: 1.1em;
-        margin: 8px 0 8px 0;
-      }
-      nav ul li a {
-        font-size: 1em;
-        padding: 0.5em 0.7em;
-        width: 97%;
-        text-align: center;
-      }
-      .contact-hero, .jotform-embed { padding: 1.3em 0.7em 1.2em 0.7em; }
+      width: 100%;
+      max-width: 400px;
+      height: 480px;
+      border: none;
+      margin: 0 auto;
+      display: block;
     }
     @media (max-width: 700px) {
-      .site-title { font-size: 1.5em; }
-      nav ul {
-        flex-direction: column;
-        gap: 0.7em;
-        margin: 5px 0 5px 0;
-      }
-      nav ul li a {
-        width: 98%;
-        font-size: 0.98em;
-        padding: 0.3em 0;
-        text-align: center;
-      }
       .jotform-embed { padding: 1em 0.4em 1.2em 0.4em;}
       .contact-container { padding: 0 0.2em;}
+      .jotform-embed iframe { max-width: 98vw; height: 430px; }
     }
     footer {
       margin-top: 2.5rem;
@@ -223,7 +207,7 @@
         </p>
       </section>
       <section class="jotform-embed">
-        <!-- JotForm Embed -->
+        <!-- JotForm Embed - now smaller -->
         <iframe id="JotFormIFrame-252676232419157"
           title="EHS Resources Contact Form"
           onload="window.parent.scrollTo(0,0)"
@@ -231,7 +215,6 @@
           allow="geolocation; microphone; camera; fullscreen; payment"
           src="https://form.jotform.com/252676232419157"
           frameborder="0"
-          style="min-width:100%;max-width:100%;height:539px;border:none;"
           scrolling="no">
         </iframe>
         <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
