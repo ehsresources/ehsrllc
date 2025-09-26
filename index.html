@@ -5,6 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EHS Resources, LLC | Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
+      min-height: 100vh;
+    }
+    .hero {
+      background: linear-gradient(100deg, #093154ee 70%, #5ef7b299 100%);
+      border-radius: 28px;
+      box-shadow: 0 8px 40px #00f0ff33;
+      padding: 3.2rem 1.7rem 2.3rem 1.7rem;
+      text-align: center;
+      color: #eaf0f6;
+      margin: 2.7rem auto 2.2rem auto;
+      max-width: 900px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -50px;
+      left: -50px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, #5ef7b2cc 0%, #0197a600 80%);
+      filter: blur(2px);
+      opacity: 0.6;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      font-weight: 900;
+      color: #5ef7b2;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.32em;
+      text-shadow: 0 2px 28px #00f0ff, 0 0 32px #0197a6;
+    }
+    .hero .hero-tagline {
+      font-size: 1.28em;
+      font-weight: 700;
+      color: #aafaff;
+      margin-bottom: 0.8em;
+      text-shadow: 0 2px 14px #5ef7b233;
+    }
+    .hero p {
+      font-size: 1.14em;
+      color: #eaf0f6;
+      margin-bottom: 1.6em;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #00f0ff 0%, #5ef7b2 100%);
+      color: #093154;
+      padding: 1em 2.8em;
+      border-radius: 14px;
+      font-size: 1.11em;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      margin-top: 0.5em;
+      box-shadow: 0 3px 16px #00f0ff77;
+      border: none;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
+    }
+    .cta-button:hover, .cta-button:focus {
+      background: linear-gradient(90deg, #5ef7b2 0%, #00f0ff 100%);
+      color: #093154;
+      box-shadow: 0 6px 30px #5ef7b2cc;
+      transform: scale(1.07);
+    }
+    .trust-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2.3em;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    .trust-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #5ef7b2;
+      font-size: 2.1em;
+      text-shadow: 0 0 10px #00f0ff99;
+      font-weight: 900;
+    }
+    .trust-icon span {
+      font-size: 0.42em;
+      color: #eaf0f6;
+      font-weight: 700;
+      margin-top: 0.25em;
+      text-shadow: none;
+      opacity: 0.93;
+      letter-spacing: 0.03em;
+    }
+    footer {
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        padding: 2.1rem 0.8rem 1.3rem 0.8rem;
+      }
+      .trust-icons {
+        gap: 1.3em;
+      }
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.4em; }
+      .hero .hero-tagline { font-size: 1em;}
+      .trust-icon { font-size: 1.1em;}
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
   <header>
@@ -18,14 +131,23 @@
       </ul>
     </nav>
   </header>
-  <main class="home-main">
+  <main>
     <section class="hero">
       <h1>Protecting People. Preserving the Environment. Driving Compliance.</h1>
+      <div class="hero-tagline">
+        Practical EHS solutions for safer workplaces, cleaner communities, and total compliance.
+      </div>
       <p>
-        EHS Resources, LLC offers practical, tailored solutions for environmental, health, and safety compliance. 
-        Empowering your business to protect your workforce, safeguard communities, and stay compliant—confidently.
+        <strong>EHS Resources, LLC</strong> offers tailored environmental, health, and safety expertise to power your business, protect your people, and ensure you meet every regulation with confidence.<br>
+        Local roots, national reach &mdash; built for Florida, trusted everywhere.
       </p>
       <a href="services.html" class="cta-button">See Our Services</a>
+      <div class="trust-icons">
+        <div class="trust-icon"><i class="fas fa-shield-heart"></i><span>Safety First</span></div>
+        <div class="trust-icon"><i class="fas fa-leaf"></i><span>Environmental Care</span></div>
+        <div class="trust-icon"><i class="fas fa-graduation-cap"></i><span>Certified Experts</span></div>
+        <div class="trust-icon"><i class="fas fa-handshake-angle"></i><span>Trusted Partner</span></div>
+      </div>
     </section>
   </main>
   <footer>
