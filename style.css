@@ -346,3 +346,63 @@ hr {
   font-weight: 900;
   letter-spacing: 0.03em;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2.4em;
+  padding: 0;
+  margin: 32px 0 32px 0;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  display: inline-block;
+  font-size: 1.32em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+  color: #093154;
+  padding: 0.9em 2.7em;
+  border-radius: 18px;
+  box-shadow: 0 4px 22px #5ef7b266, 0 1px 3px #00ff7b55;
+  border: none;
+  text-decoration: none;
+  transition: 
+    background 0.19s cubic-bezier(.4,2,.5,1), 
+    color 0.19s, 
+    box-shadow 0.19s,
+    transform 0.13s;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li a.active,
+nav ul li a:focus,
+nav ul li a:hover {
+  background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+  color: #093154;
+  box-shadow: 0 6px 32px #5ef7b2cc, 0 1px 8px #00ff7b77;
+  transform: scale(1.07);
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+    margin: 24px 0 18px 0;
+  }
+  nav ul li a {
+    width: 90%;
+    font-size: 1.1em;
+    padding: 0.8em 0;
+    text-align: center;
+  }
+}
