@@ -9,6 +9,76 @@
     body {
       background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
       min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav {
+      background: #093154;
+      color: #eaf0f6;
+      box-shadow: 0 4px 22px rgba(7,26,44,0.55);
+      padding: 12px 0 4px 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .site-title {
+      color: #13a05a;
+      font-weight: 900;
+      font-size: 4.5em;
+      letter-spacing: 0.14em;
+      margin: 0.4em 0 0.1em 0;
+      text-align: center;
+      font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+      background: none !important;
+      text-shadow: 0 0 3px #13a05a33;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.4em;
+      padding: 0;
+      margin: 10px 0 10px 0;
+    }
+    nav ul li {
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      display: inline-block;
+      font-size: 1.18em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+      color: #093154;
+      padding: 0.6em 1.7em;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px #5ef7b266, 0 1px 2px #00ff7b44;
+      border: none;
+      text-decoration: none;
+      transition:
+        background 0.18s cubic-bezier(.4,2,.5,1),
+        color 0.18s,
+        box-shadow 0.18s,
+        transform 0.12s;
+      position: relative;
+      z-index: 1;
+    }
+    nav ul li a.active,
+    nav ul li a:focus,
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+      color: #093154;
+      box-shadow: 0 6px 22px #5ef7b2cc, 0 1px 8px #00ff7b77;
+      transform: scale(1.08);
+      outline: none;
+      text-shadow: 0 0 6px #5ef7b2cc, 0 0 2px #00ff7b99;
+    }
+    @media (max-width: 900px) {
+      .site-title { font-size: 2.8em; }
+      nav ul {
+        gap: 1.1em;
+      }
     }
     .about-container {
       max-width: 950px;
@@ -44,7 +114,7 @@
       margin-bottom: 0;
     }
     .florida-highlight {
-      color: #00f0ff;  /* Super bright blue, no glow */
+      color: #00f0ff;
       font-weight: 900;
       letter-spacing: 0.03em;
     }
@@ -78,151 +148,68 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 2.2em;
-      margin: 2em 0 0.5em 0;
-    }
-    .apart-card {
-      flex: 1 1 340px;
-      min-width: 270px;
-      background: linear-gradient(120deg, #00f0ff18 70%, #5ef7b218 100%);
-      border-left: 8px solid #00f0ff;
-      border-radius: 13px;
-      box-shadow: 0 2px 26px #00f0ff33;
-      padding: 1.3em 1.1em 1.2em 1.4em;
-      font-weight: 600;
-      font-size: 1.08em;
-      color: #eaf0f6;
-      margin-bottom: 0;
-      text-shadow: 0 0 8px #00f0ff33;
-    }
-    .apart-card h2 {
-      color: #00f0ff;
-      font-size: 1.22em;
-      font-weight: 900;
-      margin-bottom: 0.28em;
-      letter-spacing: 0.07em;
-      text-shadow: 0 2px 18px #00f0ff99;
-      border-left: 5px solid #5ef7b2;
-      padding-left: 0.5em;
-    }
-    .about-mission-box {
-      background: linear-gradient(90deg, #0197a6 25%, #093154 80%);
-      color: #fff;
-      border-left: 8px solid #5ef7b2;
-      border-radius: 11px;
-      padding: 1.1em 1.1em 1em 1.5em;
-      margin: 2em auto 1.8em auto;
-      font-size: 1.13em;
-      font-weight: 700;
-      box-shadow: 0 2px 18px #00f0ff66;
-      text-shadow: 0 1px 8px #00f0ff;
-      max-width: 700px;
-    }
-    .about-cta {
-      text-align: center;
-      margin-top: 2.2em;
-    }
-    .about-cta-btn {
-      display: inline-block;
-      background: linear-gradient(90deg, #00f0ff 0%, #5ef7b2 100%);
-      color: #093154;
-      padding: 1em 2.6em;
-      border-radius: 12px;
-      font-size: 1.09em;
-      font-weight: 900;
-      letter-spacing: 0.09em;
-      text-decoration: none;
-      margin-top: 0.5em;
-      box-shadow: 0 3px 12px #00f0ff77;
-      border: none;
-      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-    }
-    .about-cta-btn:hover, .about-cta-btn:focus {
-      background: linear-gradient(90deg, #5ef7b2 0%, #00f0ff 100%);
-      color: #093154;
-      box-shadow: 0 6px 24px #5ef7b2cc;
-    }
-    @media (max-width: 900px) {
-      .about-apart-row {
-        flex-direction: column;
-        gap: 1.1em;
-      }
-      .apart-card {
-        margin-bottom: 0.9em;
-      }
-      .about-mission-box {
-        margin-top: 1.3em;
-      }
     }
     @media (max-width: 700px) {
-      .about-container { padding: 0 0.2em;}
-      .about-hero { padding: 1.2rem 0.4rem 0.8rem 0.4rem;}
-      .about-maincard { padding: 1.1em 0.4em 1.2em 0.4em;}
-      .about-hero h1 { font-size: 1.7em; }
-      .apart-card h2 { font-size: 1em;}
+      .about-apart-row {
+        flex-direction: column;
+        gap: 1em;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="site-title">EHS Resources, LLC</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
   </header>
-  <main>
-    <div class="about-container">
-      <section class="about-hero">
-        <h1>About: EHS Resources, LLC</h1>
-        <div class="about-hero-tagline">
-          Protecting People. Preserving the Environment. Driving Compliance.
-        </div>
-        <p>
-          At EHS Resources, LLC, we specialize in delivering practical solutions that help organizations meet their environmental, health, and safety responsibilities with confidence.<br>
-          <strong><span class="florida-highlight">Founded and operated in Florida</span></strong>, we provide consulting and training services tailored to your business and beyond.
-        </p>
-      </section>
-
-      <section class="about-maincard">
-        <div class="about-section-title">What We Do</div>
-        <div class="about-section-text">
-          We focus on industry-specific assessments and environmental and safety training programs that empower businesses to protect their workforce, safeguard communities, and maintain compliance with evolving regulations.<br>
-          From stormwater and air quality considerations to workplace hazard evaluations, we bring technical expertise and hands-on experience to every project.
-        </div>
-
-        <div class="about-section-title" style="margin-top:2.2em;">What sets us apart?</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="about-container">
+    <section class="about-hero">
+      <h1>About Us</h1>
+      <div class="about-hero-tagline">
+        Your trusted partner for environmental health & safety solutions in <span class="florida-highlight">Florida</span>
+      </div>
+      <p>
+        EHS Resources, LLC is dedicated to supporting organizations with practical and compliant safety management. Our team brings decades of experience and a commitment to helping you meet your goals.
+      </p>
+    </section>
+    <div class="about-maincard">
+      <div class="about-section-title">Who We Are</div>
+      <div class="about-section-text">
+        We are a team of seasoned EHS professionals passionate about creating safer workplaces. Our knowledge spans many industries and regulatory environments.
+      </div>
+      <div class="about-section-title">Our Mission</div>
+      <div class="about-section-text">
+        To deliver high-quality, cost-effective EHS consulting services tailored to your unique needs.
+      </div>
+      <div class="about-section-title">What Sets Us Apart</div>
+      <div class="about-section-text">
         <div class="about-apart-row">
-          <div class="apart-card">
-            <h2>Flexible, Specialized Expertise</h2>
-            Our flexible model combines in-house expertise with a network of specialized professionals engaged on a project-by-project basis. This ensures that every client receives the right knowledge and certifications for the job, without unnecessary overhead or generic "off-the-shelf" solutions.
+          <div>
+            <strong>Expertise:</strong><br>
+            Decades of regulatory and practical experience.
           </div>
-          <div class="apart-card">
-            <h2>Empowerment, Not Dependency</h2>
-            Even more importantly, we want to help you become self-sufficient. The programs, procedures, assessments, results, and material we create for you are all yours at the completion of the project. We believe in empowering our clients, not locking them into ongoing dependency.
+          <div>
+            <strong>Client Focus:</strong><br>
+            We prioritize your goals and compliance.
+          </div>
+          <div>
+            <strong>Responsive Support:</strong><br>
+            Quick answers and dedicated service.
           </div>
         </div>
-
-        <div class="about-mission-box">
-          <strong>Our Mission:</strong><br>
-          Protect people by identifying and reducing workplace risks.<br>
-          Preserve the environment by guiding companies toward sustainable, compliant practices.<br>
-          Provide value through clear, actionable guidance that strengthens operations rather than complicates them.
-        </div>
-        <div class="about-section-text" style="margin-bottom:0;">
-          Whether you need a customized training program, a detailed sampling plan, or a comprehensive safety audit, <strong>EHS Resources, LLC is your partner in building safer, more resilient workplaces.</strong>
-        </div>
-        <div class="about-cta">
-          <a href="contact.html" class="about-cta-btn">Get in Touch</a>
-        </div>
-      </section>
+      </div>
+      <div class="about-section-title">Our Values</div>
+      <div class="about-section-text">
+        Integrity, professionalism, and a passion for safety.
+      </div>
     </div>
-  </main>
-  <footer>
-    &copy; 2025 EHS Resources, LLC. All rights reserved.
-  </footer>
+  </div>
 </body>
 </html>
