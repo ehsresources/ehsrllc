@@ -340,3 +340,9 @@ hr {
     border-width: 4px;
   }
 }
+
+.florida-highlight {
+  color: #00f0ff;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
