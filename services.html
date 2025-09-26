@@ -3,74 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | EHS Resources, LLC</title>
+  <title>Our Services | EHS Resources, LLC</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .services-card {
-      background: rgba(13,40,58,0.98);
-      border-radius: 18px;
-      border-left: 10px solid var(--accent-blue);
-      border-right: 10px solid var(--accent-green);
-      box-shadow: 0 2px 18px 0 #036c4f99;
-      padding: 2.5rem 1.5rem 2.2rem 1.5rem;
-      margin-bottom: 2.8rem;
-      margin-top: 2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .services-list {
-      list-style: none;
-      padding: 0;
+    body {
+      background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
+      min-height: 100vh;
       margin: 0;
+      padding: 0;
     }
-    .services-list li {
-      background: linear-gradient(90deg,rgba(10,60,117,0.13) 60%,rgba(3,108,79,0.07) 100%);
-      padding: 1.15em 1em;
-      border-radius: 8px;
-      margin-bottom: 0.65em;
-      font-size: 1.13em;
-      color: var(--text-main);
-      font-weight: 500;
-      box-shadow: 0 1px 8px 0 #0a3c7522;
-      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    .container {
+      max-width: 950px;
+      margin: 2.7rem auto;
+      padding: 0 1.2rem;
     }
-    .services-list li:nth-child(even) {
-      background: linear-gradient(90deg,rgba(3,108,79,0.18) 40%,rgba(10,60,117,0.11) 100%);
-    }
-    .services-list li:hover {
-      background: var(--accent-cyan);
-      color: #102542;
-      box-shadow: 0 3px 18px var(--accent-cyan);
-      font-weight: 700;
-    }
-    .services-intro {
+    .site-title {
+      color: #5ef7b2;
+      font-weight: 900;
+      font-size: 4.5em;
+      letter-spacing: 0.14em;
+      margin: 0.7em 0 0.3em 0;
       text-align: center;
-      margin-bottom: 1.4em;
-      color: var(--accent-cyan);
+      font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      text-shadow:
+        0 0 18px #5ef7b2,
+        0 0 40px #5ef7b2;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.4em;
+      padding: 0;
+      margin: 32px 0 32px 0;
+    }
+    nav ul li {
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      display: inline-block;
       font-size: 1.18em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+      color: #093154;
+      padding: 0.8em 2.1em;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px #5ef7b266, 0 1px 2px #00ff7b44;
+      border: none;
+      text-decoration: none;
+      transition:
+        background 0.18s cubic-bezier(.4,2,.5,1),
+        color 0.18s,
+        box-shadow 0.18s,
+        transform 0.12s;
+      position: relative;
+      z-index: 1;
+    }
+    nav ul li a.active,
+    nav ul li a:focus,
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+      color: #093154;
+      box-shadow: 0 6px 22px #5ef7b2cc, 0 1px 8px #00ff7b77;
+      transform: scale(1.08);
+      outline: none;
+      text-shadow: 0 0 6px #5ef7b2cc, 0 0 2px #00ff7b99;
+    }
+    @media (max-width: 900px) {
+      nav ul {
+        gap: 1.1em;
+        margin: 22px 0 16px 0;
+      }
+      nav ul li a {
+        font-size: 1em;
+        padding: 0.7em 0.7em;
+        width: 97%;
+        text-align: center;
+      }
+      .site-title {
+        font-size: 2.8em;
+      }
+    }
+    @media (max-width: 700px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.7em;
+        margin: 10px 0 8px 0;
+      }
+      nav ul li a {
+        width: 98%;
+        font-size: 0.98em;
+        padding: 0.5em 0;
+        text-align: center;
+      }
+      .site-title {
+        font-size: 1.5em;
+      }
+    }
+    .maincard {
+      background: #172b3d;
+      border-radius: 20px;
+      box-shadow: 0 6px 35px #0197a655;
+      padding: 2.1rem 1.8rem 2rem 1.8rem;
+      margin-bottom: 2em;
+      color: #eaf0f6;
+    }
+    .section-title {
+      color: #5ef7b2;
+      font-size: 1.6em;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      margin-top: 1.7em;
+      margin-bottom: 0.36em;
+      text-shadow: 0 3px 12px #00f0ff44;
+      border-left: 6px solid #5ef7b2;
+      padding-left: 0.7em;
+      background: none;
+    }
+    .section-text {
+      font-size: 1.13em;
+      color: #eaf0f6;
+      margin-bottom: 1.3em;
+      line-height: 1.68;
+    }
+    .service-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.7em;
+      margin-top: 2em;
+      margin-bottom: 2.5em;
+      justify-content: center;
+    }
+    .service-box {
+      background: #0f2132;
+      border: 2px solid #5ef7b2;
+      border-radius: 15px;
+      color: #eaf0f6;
+      box-shadow: 0 2px 16px #00ff7b22;
+      padding: 1.3em 1.3em 1.1em 1.3em;
+      min-width: 250px;
+      max-width: 360px;
+      flex: 1 1 290px;
+      font-size: 1.08em;
       font-weight: 600;
-      text-shadow: 0 2px 10px var(--accent-blue);
+      line-height: 1.7;
+      margin-bottom: 0.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transition: transform 0.14s, box-shadow 0.14s;
+    }
+    .service-box b {
+      color: #5ef7b2;
+      font-size: 1.09em;
+      letter-spacing: 0.01em;
+      display: block;
+      margin-bottom: 0.35em;
+    }
+    .service-box:hover, .service-box:focus {
+      transform: scale(1.03);
+      box-shadow: 0 6px 30px #5ef7b2aa;
+      border-color: #00ff7b;
+      z-index: 1;
     }
     .cta-button {
       display: inline-block;
-      background: var(--btn-bg);
-      color: #eaf0f6;
-      padding: 1em 2.5em;
+      background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+      color: #093154;
+      padding: 1em 2.6em;
       border-radius: 12px;
-      font-size: 1.09em;
-      font-weight: 700;
-      letter-spacing: 0.07em;
+      font-size: 1.08em;
+      font-weight: 900;
+      letter-spacing: 0.11em;
       text-decoration: none;
-      margin-top: 1.6em;
-      box-shadow: 0 2px 7px var(--accent-blue);
+      margin-top: 0.5em;
+      box-shadow: 0 2px 12px #18a86b55;
       border: none;
-      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
     }
     .cta-button:hover, .cta-button:focus {
-      background: var(--btn-bg-hover);
-      color: var(--accent-cyan);
-      box-shadow: 0 4px 16px var(--accent-green);
+      background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+      color: #093154;
+      box-shadow: 0 6px 20px #5ef7b2cc;
+      transform: scale(1.04);
+    }
+    footer {
+      margin-top: 2.5rem;
+      background: none;
+      color: #eaf0f6;
+      border-top: 2px solid #5ef7b2;
     }
   </style>
 </head>
@@ -86,37 +214,52 @@
       </ul>
     </nav>
   </header>
-  <main class="services-main">
-    <section class="services-card">
-      <h1 style="color:var(--accent-cyan);text-align:center;margin-bottom:0.3em;text-shadow:0 2px 12px var(--accent-blue);letter-spacing:0.09em;">
-        Our Services
-      </h1>
-      <div class="services-intro">
-        Comprehensive, practical, and tailored EHS solutions for every organization.
-      </div>
-      <ul class="services-list">
-        <li>Biennial reports</li>
-        <li>Contingency planning</li>
-        <li>Egress mapping</li>
-        <li>Emergency response plans</li>
-        <li>Environmental permit compliance services</li>
-        <li>Hazard and risk assessments</li>
-        <li>Industry best practice advising</li>
-        <li>Noise monitoring</li>
-        <li>PPE matrix development</li>
-        <li>Program and policy development</li>
-        <li>Storm water pollution prevention plans/inspections</li>
-        <li>Tailored specialized EHS training</li>
-        <li>Tier II reporting</li>
-        <li>Toxic release inventory</li>
-        <li>Training matrix compliance calendar</li>
-        <li>Work instruction development</li>
-        <li>And more</li>
-      </ul>
-      <div style="text-align:center;">
-        <a href="contact.html" class="cta-button">Contact us to get started</a>
-      </div>
-    </section>
+  <main>
+    <div class="container">
+      <section class="maincard">
+        <div class="section-title">Our Services</div>
+        <div class="section-text">
+          EHS Resources, LLC offers a comprehensive suite of environmental, health, and safety services designed to help your organization thrive. Our team brings decades of expertise and a practical, hands-on approach to every project.
+        </div>
+        <div class="service-boxes">
+          <div class="service-box">
+            <b>Compliance Audits & Inspections</b>
+            In-depth evaluations to ensure your business meets all regulatory requirements and industry best practices.
+          </div>
+          <div class="service-box">
+            <b>Training & Education</b>
+            Custom, engaging training for topics like OSHA compliance, hazardous materials, emergency response, and more.
+          </div>
+          <div class="service-box">
+            <b>Program Development</b>
+            Creation and implementation of tailored EHS programs, policies, and procedures.
+          </div>
+          <div class="service-box">
+            <b>Risk Assessment & Mitigation</b>
+            Identifying workplace hazards and developing actionable plans to minimize risk and liability.
+          </div>
+          <div class="service-box">
+            <b>Environmental Permitting & Reporting</b>
+            Guidance through permitting processes and accurate, timely regulatory reporting.
+          </div>
+          <div class="service-box">
+            <b>Industrial Hygiene Services</b>
+            Monitoring and solutions for air quality, noise, chemical exposure, and other occupational health challenges.
+          </div>
+          <div class="service-box">
+            <b>Incident Investigation & Response</b>
+            Thorough analysis of workplace incidents and support for corrective action planning.
+          </div>
+          <div class="service-box">
+            <b>Sustainability & Green Initiatives</b>
+            Strategies for waste reduction, resource conservation, and sustainable growth.
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:2.2em;">
+          <a href="contact.html" class="cta-button">Request a Consultation</a>
+        </div>
+      </section>
+    </div>
   </main>
   <footer>
     &copy; 2025 EHS Resources, LLC. All rights reserved.
