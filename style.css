@@ -42,15 +42,15 @@ header, nav {
   margin-bottom: 40px;
 }
 
-/* Company Name - Green, Glowing, No Gradient */
+/* Company Name - Even Bigger, Green, Glowing, No Gradient */
 .site-title {
   color: #5ef7b2;
   font-weight: 900;
-  font-size: 3.5em; /* Increased size */
+  font-size: 4.5em; /* Even bigger */
   letter-spacing: 0.14em;
   text-shadow:
-    0 0 14px #5ef7b2,
-    0 0 32px #5ef7b2;
+    0 0 18px #5ef7b2,
+    0 0 40px #5ef7b2;
   margin: 0.7em 0 0.3em 0;
   text-align: center;
   font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
@@ -59,21 +59,27 @@ header, nav {
   -webkit-text-fill-color: unset !important;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .site-title {
-    font-size: 2.2em; /* Also larger on mobile */
+    font-size: 2.8em;
+    margin: 0.9em 0 0.2em 0;
+  }
+}
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 1.7em;
     margin: 0.9em 0 0.2em 0;
   }
 }
 
-/* Navigation Tabs - Smaller, Still Eye Catching */
+/* Navigation Tabs - Slightly Bigger, More Spaced Out */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1em;
+  gap: 2.4em;         /* More spaced out */
   padding: 0;
-  margin: 20px 0 20px 0;
+  margin: 32px 0 32px 0;
 }
 
 nav ul li {
@@ -83,22 +89,22 @@ nav ul li {
 
 nav ul li a {
   display: inline-block;
-  font-size: 0.98em;
+  font-size: 1.18em;  /* Slightly bigger */
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.09em;
   background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
   color: #093154;
-  padding: 0.5em 1.2em;
-  border-radius: 13px;
-  box-shadow: 0 2px 8px #5ef7b266, 0 1px 1px #00ff7b44;
+  padding: 0.8em 2.1em; /* More padding, but still not huge */
+  border-radius: 16px;
+  box-shadow: 0 4px 14px #5ef7b266, 0 1px 2px #00ff7b44;
   border: none;
   text-decoration: none;
-  transition: 
-    background 0.16s cubic-bezier(.4,2,.5,1), 
-    color 0.16s, 
-    box-shadow 0.16s,
-    transform 0.10s;
+  transition:
+    background 0.18s cubic-bezier(.4,2,.5,1),
+    color 0.18s,
+    box-shadow 0.18s,
+    transform 0.12s;
   position: relative;
   z-index: 1;
 }
@@ -108,21 +114,33 @@ nav ul li a:focus,
 nav ul li a:hover {
   background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
   color: #093154;
-  box-shadow: 0 4px 12px #5ef7b2cc, 0 1px 5px #00ff7b77;
-  transform: scale(1.04);
+  box-shadow: 0 6px 22px #5ef7b2cc, 0 1px 8px #00ff7b77;
+  transform: scale(1.08);
   outline: none;
-  text-shadow: 0 0 4px #5ef7b2cc, 0 0 1px #00ff7b99;
+  text-shadow: 0 0 6px #5ef7b2cc, 0 0 2px #00ff7b99;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  nav ul {
+    gap: 1.1em;
+    margin: 22px 0 16px 0;
+  }
+  nav ul li a {
+    font-size: 1em;
+    padding: 0.7em 0.7em;
+    width: 97%;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
   nav ul {
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.7em;
     margin: 10px 0 8px 0;
   }
   nav ul li a {
-    width: 97%;
-    font-size: 0.97em;
+    width: 98%;
+    font-size: 0.98em;
     padding: 0.5em 0;
     text-align: center;
   }
