@@ -27,7 +27,7 @@
       position: relative;
     }
     .site-title {
-      color: #5ef7b2;
+      color: #13a05a;
       font-weight: 900;
       font-size: 4.5em;
       letter-spacing: 0.14em;
@@ -37,9 +37,26 @@
       background: none !important;
       -webkit-background-clip: unset !important;
       -webkit-text-fill-color: unset !important;
+      /* Reduced glow: */
       text-shadow:
-        0 0 18px #5ef7b2,
-        0 0 40px #5ef7b2;
+        0 0 8px #13a05a55,
+        0 0 18px #13a05a33;
+    }
+    .section-title {
+      color: #5ef7b2;
+      font-size: 1.6em;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      margin-top: 1.7em;
+      margin-bottom: 0.36em;
+      text-shadow: 0 3px 12px #00f0ff44;
+      border-left: 6px solid #5ef7b2;
+      padding-left: 0.7em;
+      background: none;
+    }
+    .hero .section-title {
+      margin-top: 0;
+      margin-bottom: 1em;
     }
     .hero .hero-tagline {
       font-size: 1.21em;
@@ -55,9 +72,10 @@
     }
     .glow-highlight {
       color: #eaf0f6;
+      /* Soft, minimal glow: */
       text-shadow:
-        0 0 12px #5ef7b2,
-        0 0 24px #5ef7b2;
+        0 0 3px #5ef7b2,
+        0 0 8px #5ef7b255;
       font-weight: 900;
     }
     .cta-button {
@@ -88,18 +106,6 @@
       padding: 2.1rem 1.8rem 2rem 1.8rem;
       margin-bottom: 2em;
       color: #eaf0f6;
-    }
-    .section-title {
-      color: #5ef7b2;
-      font-size: 1.6em;
-      font-weight: 900;
-      letter-spacing: 0.11em;
-      margin-top: 1.7em;
-      margin-bottom: 0.36em;
-      text-shadow: 0 3px 12px #00f0ff44;
-      border-left: 6px solid #5ef7b2;
-      padding-left: 0.7em;
-      background: none;
     }
     .section-text {
       font-size: 1.13em;
@@ -171,14 +177,14 @@
   <main>
     <div class="home-container">
       <section class="hero">
-        <h1 class="section-title">Protecting People. Preserving the Environment. Driving Compliance.</h1>
-        <div class="hero-tagline">
-          Practical EHS solutions for safer workplaces, cleaner communities, and total compliance.
+        <div class="section-title">About: EHS Resources, LLC</div>
+        <div class="section-text">
+          Protecting People. Preserving the Environment. Driving Compliance.
         </div>
-        <p>
+        <div class="section-text">
           <strong class="glow-highlight">EHS Resources, LLC</strong> offers tailored environmental, health, and safety expertise to power your business, protect your people, and ensure you meet every regulation with confidence.<br>
           Local roots, national reach &mdash; built for Florida, trusted everywhere.
-        </p>
+        </div>
         <a href="services.html" class="cta-button">See Our Services</a>
         <div class="trust-icons">
           <div class="trust-icon"><i class="fas fa-shield-heart"></i><span>Safety First</span></div>
