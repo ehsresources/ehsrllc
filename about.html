@@ -74,12 +74,13 @@
     .about-us-flex {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.6em;
+      gap: 2.2em;
       justify-content: space-between;
       margin-bottom: 2.2em;
     }
     @media (max-width: 900px) {
       .about-us-flex { flex-direction: column; gap: 1.2em; }
+      .about-card { min-width: 0; max-width: 100%; }
     }
     .about-hero-box {
       background: linear-gradient(120deg, #093154 62%, #13a05a 100%);
@@ -125,32 +126,36 @@
       margin: 0.5em 0;
     }
     .about-card {
-      flex: 1 1 340px;
-      background: linear-gradient(120deg, #093154 75%, #0197a6 100%);
-      border-radius: 12px;
-      box-shadow: 0 2px 16px #09315429;
-      padding: 1em 1.2em 0.8em 1.2em;
-      color: #b5e6d3;
-      min-width: 260px;
-      max-width: 520px;
+      flex: 1 1 500px;
+      background: #093154;
+      border-radius: 18px;
+      box-shadow: 0 2px 20px #09315466;
+      padding: 2.1em 2em 2em 2em;
+      color: #eaf0f6;
+      min-width: 370px;
+      max-width: 700px;
       border: none;
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
       margin-bottom: 0;
+      font-size: 1.33em;
+      line-height: 1.75;
+      position: relative;
     }
     .about-card h2 {
-      font-size: 1.13em;
+      font-size: 1.35em;
       font-weight: 900;
       color: #5ef7b2;
-      margin-bottom: 0.25em;
-      letter-spacing: 0.06em;
+      margin-bottom: 0.45em;
+      letter-spacing: 0.07em;
       font-family: 'Oswald', Arial, sans-serif;
+      text-shadow: 0 1px 8px #5ef7b266;
     }
     .about-card.specialized-expertise p {
-      font-size: 1.06em;
+      font-size: 1.17em;
       color: #eaf0f6;
-      margin: 0.4em 0 0.2em 0;
-      line-height: 1.55;
-      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0.7em 0 0.2em 0;
+      line-height: 1.7;
+      font-family: 'Roboto', Arial, sans-serif;
       text-align: center;
       letter-spacing: 0.01em;
     }
@@ -158,10 +163,10 @@
       color: #5ef7b2;
       font-weight: 900;
       font-family: 'Oswald', Arial, sans-serif;
+      font-size: 1.07em;
     }
-    /* --- Empowerment glowing sentence: Roboto, green, crisp --- */
     .empowerment-glow {
-      font-size: 1.12em;
+      font-size: 1.18em;
       font-family: 'Roboto', Arial, sans-serif;
       color: #13a05a;
       text-shadow:
@@ -175,42 +180,55 @@
       padding: 0.09em 0;
       text-align: center;
     }
-    /* --- Mission Statement --- */
-    .about-mission-highlight-v3 {
-      background: linear-gradient(120deg, #093154 70%, #13a05a 100%);
-      border-radius: 18px;
-      box-shadow: 0 2px 18px #09315499;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 900;
-      padding: 1.7em 2em 1.3em 2em;
-      margin: 0 auto 1.2em auto;
-      max-width: 690px;
-      text-align: center;
-      border-top: 2px solid #0197a6;
-      border-bottom: 2px solid #13a05a;
-      letter-spacing: 0.03em;
+    /* --- Mission Box --- */
+    .mission-box {
+      background: #093154;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px #0197a677, 0 1px 6px #13a05a44;
+      padding: 2.2em 2em 2em 2em;
+      margin: 2em auto 2em auto;
+      max-width: 700px;
+      color: #eaf0f6;
+      border: 3px solid #13a05a;
+      position: relative;
     }
-    .mission-line {
-      font-size: 1.13em;
-      margin-bottom: 1.05em;
-      line-height: 1.5;
+    .mission-heading {
+      font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+      font-size: 2em;
       color: #5ef7b2;
-      text-shadow: 0 1px 8px #09315433;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      margin-top: 0;
+      margin-bottom: 1em;
+      text-align: center;
+      text-shadow: 0 2px 12px #0197a633;
+    }
+    .mission-body p {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 1.23em;
+      line-height: 1.65;
+      margin-bottom: 1.2em;
+      text-align: center;
     }
     .mission-accent-green {
       color: #13a05a;
-      font-weight: 900;
+      font-weight: 700;
     }
     .mission-accent-blue {
-      color: #00f0ff;
-      font-weight: 900;
-    }
-    .about-mission-footer {
-      font-size: 1.03em;
       color: #5ef7b2;
       font-weight: 700;
-      margin-top: 1.5em;
-      text-shadow: 0 1px 6px #09315466;
+    }
+    .mission-footer {
+      font-size: 1.09em;
+      color: #eaf0f6;
+      margin-top: 1.4em;
+      line-height: 1.5;
+    }
+    .mission-brand {
+      color: #00f0ff;
+      font-weight: 900;
+      font-family: 'Oswald', Arial, sans-serif;
+      letter-spacing: 0.05em;
     }
     .about-cta-btn {
       display: inline-block;
@@ -291,19 +309,18 @@
         </div>
       </div>
 
-      <div class="about-mission-highlight-v3">
-        <div class="mission-line">
-          <span class="mission-accent-green">Protect people</span> by <span class="mission-accent-blue">identifying</span> and <span class="mission-accent-green">reducing workplace risks</span>.
-        </div>
-        <div class="mission-line">
-          <span class="mission-accent-green">Preserve the environment</span> by guiding companies toward <span class="mission-accent-blue">sustainable</span>, <span class="mission-accent-green">compliant practices</span>.
-        </div>
-        <div class="mission-line">
-          <span class="mission-accent-blue">Provide value</span> through clear, actionable guidance that strengthens operations—never complicates them.
-        </div>
-        <div class="about-mission-footer" style="margin-top:1.6em;">
-          Whether you need a customized training program, a detailed sampling plan, or a comprehensive safety audit,<br>
-          <span style="color:#5ef7b2;font-weight:900;">EHS Resources, LLC</span> is your partner in building safer, more resilient workplaces.
+      <div class="mission-box">
+        <h2 class="mission-heading">Our Mission</h2>
+        <div class="mission-body">
+          <p>
+            <span class="mission-accent-green">Protect people</span> by identifying and reducing workplace risks.<br>
+            <span class="mission-accent-blue">Preserve the environment</span> by guiding companies toward <span class="mission-accent-green">sustainable</span>, <span class="mission-accent-green">compliant practices</span>.<br>
+            <span class="mission-accent-blue">Provide value</span> through clear, actionable guidance that strengthens operations—never complicates them.
+          </p>
+          <p class="mission-footer">
+            Whether you need a customized training program, a detailed sampling plan, or a comprehensive safety audit,<br>
+            <span class="mission-brand">EHS Resources, LLC</span> is your partner in building safer, more resilient workplaces.
+          </p>
         </div>
       </div>
 
