@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | EHS Resources, LLC</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .services-card {
+      background: rgba(13,40,58,0.98);
+      border-radius: 18px;
+      border-left: 10px solid var(--accent-blue);
+      border-right: 10px solid var(--accent-green);
+      box-shadow: 0 2px 18px 0 #036c4f99;
+      padding: 2.5rem 1.5rem 2.2rem 1.5rem;
+      margin-bottom: 2.8rem;
+      margin-top: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .services-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .services-list li {
+      background: linear-gradient(90deg,rgba(10,60,117,0.13) 60%,rgba(3,108,79,0.07) 100%);
+      padding: 1.15em 1em;
+      border-radius: 8px;
+      margin-bottom: 0.65em;
+      font-size: 1.13em;
+      color: var(--text-main);
+      font-weight: 500;
+      box-shadow: 0 1px 8px 0 #0a3c7522;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    }
+    .services-list li:nth-child(even) {
+      background: linear-gradient(90deg,rgba(3,108,79,0.18) 40%,rgba(10,60,117,0.11) 100%);
+    }
+    .services-list li:hover {
+      background: var(--accent-cyan);
+      color: #102542;
+      box-shadow: 0 3px 18px var(--accent-cyan);
+      font-weight: 700;
+    }
+    .services-intro {
+      text-align: center;
+      margin-bottom: 1.4em;
+      color: var(--accent-cyan);
+      font-size: 1.18em;
+      font-weight: 600;
+      text-shadow: 0 2px 10px var(--accent-blue);
+    }
+    .cta-button {
+      display: inline-block;
+      background: var(--btn-bg);
+      color: #eaf0f6;
+      padding: 1em 2.5em;
+      border-radius: 12px;
+      font-size: 1.09em;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-decoration: none;
+      margin-top: 1.6em;
+      box-shadow: 0 2px 7px var(--accent-blue);
+      border: none;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    }
+    .cta-button:hover, .cta-button:focus {
+      background: var(--btn-bg-hover);
+      color: var(--accent-cyan);
+      box-shadow: 0 4px 16px var(--accent-green);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,8 +87,13 @@
     </nav>
   </header>
   <main class="services-main">
-    <section>
-      <h1>Our Services</h1>
+    <section class="services-card">
+      <h1 style="color:var(--accent-cyan);text-align:center;margin-bottom:0.3em;text-shadow:0 2px 12px var(--accent-blue);letter-spacing:0.09em;">
+        Our Services
+      </h1>
+      <div class="services-intro">
+        Comprehensive, practical, and tailored EHS solutions for every organization.
+      </div>
       <ul class="services-list">
         <li>Biennial reports</li>
         <li>Contingency planning</li>
@@ -40,7 +113,9 @@
         <li>Work instruction development</li>
         <li>And more</li>
       </ul>
-      <p>Contact us for details or to discuss your unique needs.</p>
+      <div style="text-align:center;">
+        <a href="contact.html" class="cta-button">Contact us to get started</a>
+      </div>
     </section>
   </main>
   <footer>
