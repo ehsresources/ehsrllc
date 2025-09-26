@@ -1,7 +1,11 @@
 :root {
   --dark-green: #223b2f;
+  --hunter-green: #355E3B;
   --blue: #4973a8;
+  --brown: #8B5C2C;
   --light-gray: #f6f9f9;
+  --gray-section: #e6ece9;
+  --main-content-gray: #e0e5df;
   --white: #fff;
 }
 
@@ -21,9 +25,9 @@ body {
 }
 
 header {
-  background: var(--white);
+  background: var(--hunter-green);
   padding: 12px 0;
-  border-bottom: 2px solid var(--blue);
+  border-bottom: 4px solid var(--brown);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,46 +51,53 @@ nav ul {
 }
 
 nav a {
-  color: var(--dark-green);
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1em;
   padding: 6px 8px;
   border-radius: 4px;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  border: 2px solid transparent;
 }
 
 nav a.active,
 nav a:hover {
   background: var(--blue);
   color: var(--white);
+  border: 2px solid var(--dark-green);
 }
 
 main {
   flex: 1;
   width: 100%;
-  max-width: 800px;
-  margin: 40px auto 24px auto;
-  background: var(--white);
-  padding: 32px 24px;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px 0 rgba(73, 115, 168, 0.08);
+  max-width: 900px;
+  margin: 32px auto 24px auto;
+  background: var(--main-content-gray);
+  padding: 36px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(34, 59, 47, 0.12);
 }
 
 .hero {
   text-align: center;
   margin-top: 24px;
+  background: var(--gray-section);
+  padding: 36px 20px;
+  border-radius: 12px;
+  border-left: 8px solid var(--hunter-green);
 }
 
 .hero h1 {
   font-size: 2em;
   margin-bottom: 16px;
-  color: var(--dark-green);
+  color: var(--hunter-green);
 }
 
 .hero p {
-  font-size: 1.15em;
+  font-size: 1.18em;
   margin-bottom: 28px;
+  color: var(--dark-green);
 }
 
 .cta-button {
@@ -98,11 +109,35 @@ main {
   font-size: 1.15em;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.2s, border 0.2s;
+  border: 2px solid var(--brown);
 }
 
 .cta-button:hover {
-  background: var(--dark-green);
+  background: var(--brown);
+  color: var(--white);
+  border: 2px solid var(--hunter-green);
+}
+
+.section,
+.services-main > section,
+.about-main > section,
+.contact-main > section {
+  background-color: var(--gray-section);
+  border-left: 6px solid var(--hunter-green);
+  padding: 24px 20px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+h1, h2, h3 {
+  color: var(--hunter-green);
+}
+
+h2, h3 {
+  border-left: 6px solid var(--dark-green);
+  padding-left: 12px;
+  margin-bottom: 16px;
 }
 
 .services-list {
@@ -117,13 +152,14 @@ main {
 }
 
 footer {
-  background: var(--blue);
+  background: var(--brown);
   color: var(--white);
   text-align: center;
-  padding: 16px 0;
+  padding: 18px 0;
   margin-top: 32px;
   font-size: 1em;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 16px 16px;
+  border-top: 4px solid var(--hunter-green);
 }
 
 @media (max-width: 700px) {
