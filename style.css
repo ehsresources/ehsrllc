@@ -1,16 +1,25 @@
-/* Bold & Fierce Theme for ehsrllc */
+/* Bold Blues & Greens Theme for ehsrllc */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;700&display=swap');
 
 :root {
-  --primary-bg: #0d0d0d;
-  --accent: #d90429;
-  --highlight: #ffd700;
-  --text-main: #ffffff;
-  --text-faint: #cccccc;
-  --shadow: 0 4px 15px rgba(0,0,0,0.7);
-  --radius: 12px;
-  --transition: 0.2s cubic-bezier(.44,.85,.39,1.15);
-  --font-header: 'Oswald', Impact, sans-serif;
-  --font-body: 'Montserrat', Arial, sans-serif;
+  --primary-bg: #0a0c10;
+  --nav-bg: #102542;
+  --accent-blue: #2186eb;
+  --accent-green: #26c485;
+  --accent-cyan: #21e6c1;
+  --text-main: #e6eef2;
+  --text-soft: #b2becd;
+  --strong-red: #a1123a;
+  --header-frame: #17365d;
+  --section-frame: #1b3a2f;
+  --btn-bg: linear-gradient(90deg, #2186eb 60%, #26c485 100%);
+  --btn-bg-hover: linear-gradient(90deg, #26c485 60%, #2186eb 100%);
+  --shadow: 0 4px 18px rgba(16,37,66,0.35);
+  --radius: 16px;
+  --transition: 0.16s cubic-bezier(.44,.85,.39,1.15);
+  --font-header: 'Montserrat', 'Inter', Arial, sans-serif;
+  --font-body: 'Inter', 'Montserrat', Arial, sans-serif;
 }
 
 body {
@@ -19,28 +28,31 @@ body {
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
-  line-height: 1.65;
-  letter-spacing: .01em;
   min-height: 100vh;
 }
 
 header, nav {
-  background: linear-gradient(90deg, var(--accent), var(--primary-bg) 80%);
+  background: var(--nav-bg);
   color: var(--text-main);
   box-shadow: var(--shadow);
-  padding: 24px 0 12px 0;
+  padding: 26px 0 12px 0;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 header h1, nav h2 {
   font-family: var(--font-header);
-  font-size: 3rem;
-  letter-spacing: 0.13em;
+  font-size: 2.7rem;
+  letter-spacing: 0.11em;
   margin: 0;
-  color: var(--highlight);
+  color: var(--accent-blue);
   text-transform: uppercase;
-  text-shadow: 2px 3px 0 var(--accent), 0 0 12px var(--highlight);
+  text-shadow: 0 2px 18px var(--accent-blue), 0 0 8px var(--nav-bg);
+  background: var(--header-frame);
+  padding: 16px 0;
+  border-radius: var(--radius);
+  border-bottom: 4px solid var(--accent-green);
+  box-shadow: 0 8px 32px 0 #2186eb33;
 }
 
 nav ul {
@@ -49,139 +61,167 @@ nav ul {
   margin: 18px 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.3rem;
 }
 
 nav ul li a {
-  color: var(--highlight);
+  color: var(--accent-green);
   font-family: var(--font-header);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 8px 18px;
+  padding: 9px 22px;
   border-radius: var(--radius);
   transition: background var(--transition), color var(--transition), transform var(--transition);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
+  border: 2px solid transparent;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background: var(--accent);
-  color: var(--text-main);
-  transform: scale(1.08) rotate(-2deg);
-  box-shadow: 0 2px 10px var(--accent);
+  background: var(--accent-blue);
+  color: var(--primary-bg);
+  border-color: var(--accent-green);
+  transform: scale(1.08);
+  box-shadow: 0 2px 14px var(--accent-blue);
 }
 
 main, .container {
-  max-width: 900px;
+  max-width: 930px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 3rem 1.5rem;
-  background: rgba(18, 18, 18, 0.97);
+  padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+  background: var(--section-frame);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
+section, .framed-section {
+  background: rgba(24, 32, 39, 0.97);
+  border-left: 8px solid var(--accent-blue);
+  border-right: 8px solid var(--accent-green);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 16px 0 #2186eb33;
+  padding: 2.2rem 1.5rem 2.2rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
 h2, h3 {
   font-family: var(--font-header);
-  color: var(--highlight);
+  color: var(--accent-green);
   margin-top: 0;
-  text-shadow: 1px 2px var(--accent);
+  margin-bottom: 1.2em;
+  text-shadow: 0 2px 10px var(--nav-bg);
   letter-spacing: 0.09em;
+  background: linear-gradient(90deg, var(--accent-blue) 60%, var(--accent-green) 100%);
+  padding: 0.7em 1em;
+  border-radius: var(--radius);
+  border-bottom: 3px solid var(--accent-cyan);
+  display: inline-block;
+}
+
+p, li {
+  font-size: 1.08em;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin-bottom: 0.8em;
+}
+
+strong, b {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+blockquote {
+  border-left: 6px solid var(--accent-cyan);
+  padding: 1em 1.5em;
+  color: var(--accent-cyan);
+  background: #182027;
+  margin: 2em 0;
+  font-style: italic;
+  font-size: 1.1em;
+  border-radius: 8px;
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-blue);
   text-decoration: underline;
   transition: color var(--transition);
 }
 a:hover, a:focus {
-  color: var(--highlight);
-  text-shadow: 0 0 6px var(--accent);
+  color: var(--accent-cyan);
+  text-shadow: 0 0 8px var(--accent-blue);
 }
 
 button, .btn {
-  background: linear-gradient(90deg, var(--accent), var(--highlight));
-  color: var(--primary-bg);
-  padding: 0.8em 2.1em;
+  background: var(--btn-bg);
+  color: #10151a;
+  padding: 0.95em 2.5em;
   border: none;
   border-radius: var(--radius);
   font-family: var(--font-header);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
-  box-shadow: 0 2px 12px var(--accent);
+  letter-spacing: 0.10em;
+  box-shadow: 0 2px 12px var(--accent-blue);
   transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
   cursor: pointer;
   margin: 1em 0;
-}
-
-button:hover, .btn:hover, button:focus, .btn:focus {
-  background: var(--highlight);
-  color: var(--accent);
-  transform: scale(1.07) rotate(-1deg);
-  box-shadow: 0 4px 20px var(--highlight);
-}
-
-section {
-  margin: 2.5em 0 2em 0;
+}button:hover, .btn:hover, button:focus, .btn:focus {
+  background: var(--btn-bg-hover);
+  color: var(--primary-bg);
+  transform: scale(1.07);
+  box-shadow: 0 5px 22px var(--accent-green);
 }
 
 input, textarea {
-  background: #222;
+  background: #161a22;
   color: var(--text-main);
-  border: 2px solid var(--accent);
+  border: 2px solid var(--accent-blue);
   border-radius: var(--radius);
   padding: 0.8em;
   margin-bottom: 1.1em;
   font-size: 1em;
   width: 100%;
   transition: border var(--transition), box-shadow var(--transition);
-}
-
-input:focus, textarea:focus {
-  border-color: var(--highlight);
-  box-shadow: 0 0 8px var(--highlight);
+}input:focus, textarea:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
 }
 
 footer {
-  background: var(--accent);
-  color: var(--primary-bg);
+  background: var(--nav-bg);
+  color: var(--text-soft);
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1.6em 0;
   font-family: var(--font-header);
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   letter-spacing: 0.06em;
-  box-shadow: 0 -2px 16px var(--accent);
-  margin-top: 3em;
+  box-shadow: 0 -2px 16px var(--accent-blue);
+  margin-top: 3.2em;
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
 img, .logo {
-  max-width: 220px;
+  max-width: 210px;
   display: block;
-  margin: 1.5em auto 1em auto;
-  filter: drop-shadow(0 0 12px var(--accent));
+  margin: 1.3em auto 1em auto;
+  filter: drop-shadow(0 0 15px var(--accent-blue));
   border-radius: var(--radius);
 }
 
-blockquote {
-  border-left: 6px solid var(--accent);
-  padding: 1em 1.5em;
-  color: var(--text-faint);
-  background: #181818;
-  margin: 2em 0;
-  font-style: italic;
-  font-size: 1.1em;
+hr {
+  border: 1.5px solid var(--accent-blue);
+  margin: 2.5em 0;
 }
 
 @media (max-width: 700px) {
-  main, .container {
-    padding: 1rem 0.5rem 2rem 0.5rem;
+  main, .container, section, .framed-section {
+    padding: 1.2rem 0.7rem 2rem 0.7rem;
   }
   header h1, nav h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   nav ul {
     gap: 1rem;
@@ -193,6 +233,6 @@ blockquote {
   background: var(--primary-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
+  background: var(--accent-blue);
   border-radius: var(--radius);
 }
