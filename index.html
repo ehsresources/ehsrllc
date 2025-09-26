@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: linear-gradient(120deg, #eafff2 0%, #c9ffe3 100%);
+      background: linear-gradient(120deg, #eafff2 0%, #b6f5d0 100%);
       min-height: 100vh;
     }
     .hero {
-      background: linear-gradient(100deg, #eafff2 65%, #c9ffe3 100%);
+      background: linear-gradient(100deg, #eafff2 65%, #b6f5d0 100%);
       border-radius: 24px;
-      border: 2px solid #5ef7b2;
+      border: 2px solid #18a86b;
       box-shadow: none;
       padding: 2.8rem 1.7rem 2.1rem 1.7rem;
       text-align: center;
@@ -26,7 +26,7 @@
     .hero h1 {
       font-size: 2.6em;
       font-weight: 900;
-      color: #18c97a;
+      color: #18a86b;
       letter-spacing: 0.18em;
       margin-bottom: 0.32em;
       text-shadow: none;
@@ -34,7 +34,7 @@
     .hero .hero-tagline {
       font-size: 1.21em;
       font-weight: 700;
-      color: #09a25d;
+      color: #13794d;
       margin-bottom: 1em;
       text-shadow: none;
     }
@@ -45,7 +45,7 @@
     }
     .cta-button {
       display: inline-block;
-      background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+      background: linear-gradient(90deg, #18a86b 0%, #14cf78 100%);
       color: #065c3b;
       padding: 1em 2.6em;
       border-radius: 12px;
@@ -55,13 +55,13 @@
       text-decoration: none;
       margin-top: 0.5em;
       box-shadow: none;
-      border: 2px solid #18c97a;
+      border: 2px solid #18a86b;
       transition: background 0.18s, color 0.18s, border 0.18s, transform 0.12s;
     }
     .cta-button:hover, .cta-button:focus {
-      background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+      background: linear-gradient(90deg, #14cf78 0%, #18a86b 100%);
       color: #093a20;
-      border: 2px solid #009e53;
+      border: 2px solid #13794d;
       transform: scale(1.04);
     }
     .trust-icons {
@@ -75,7 +75,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #18c97a;
+      color: #18a86b;
       font-size: 2em;
       font-weight: 900;
       text-shadow: none;
@@ -89,11 +89,20 @@
       opacity: 0.9;
       text-shadow: none;
     }
-    footer {
-      margin-top: 2.5rem;
-      background: none;
-      color: #065c3b;
-      border-top: 2px solid #5ef7b2;
+    .site-title {
+      color: #18a86b;
+      font-weight: 900;
+      font-size: 4.5em;
+      letter-spacing: 0.14em;
+      margin: 0.7em 0 0.3em 0;
+      text-align: center;
+      font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      text-shadow:
+        0 0 14px #18a86b,
+        0 0 32px #18a86b;
     }
     @media (max-width: 900px) {
       .hero {
@@ -102,11 +111,21 @@
       .trust-icons {
         gap: 1.2em;
       }
+      .site-title {
+        font-size: 2.8em;
+      }
     }
     @media (max-width: 700px) {
       .hero h1 { font-size: 1.25em; }
       .hero .hero-tagline { font-size: 1em;}
       .trust-icon { font-size: 1em;}
+      .site-title { font-size: 1.5em; }
+    }
+    footer {
+      margin-top: 2.5rem;
+      background: none;
+      color: #065c3b;
+      border-top: 2px solid #18a86b;
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
