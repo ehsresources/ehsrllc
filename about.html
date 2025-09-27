@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | EHS Resources, LLC</title>
+  <!-- Home page font: only Montserrat 900 -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap" rel="stylesheet">
   <style>
     body {
       background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
@@ -28,7 +29,7 @@
       letter-spacing: 0.14em;
       margin: 0.4em 0 0.1em 0;
       text-align: center;
-      font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       background: none !important;
       text-shadow: 0 0 3px #13a05a33;
     }
@@ -39,6 +40,10 @@
       gap: 2.4em;
       padding: 0;
       margin: 10px 0 10px 0;
+    }
+    nav ul li {
+      margin: 0;
+      padding: 0;
     }
     nav ul li a {
       display: inline-block;
@@ -72,21 +77,6 @@
       margin: 2.7rem auto;
       padding: 0 1.2rem;
     }
-    .about-us-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.2em;
-      justify-content: space-between;
-      margin-bottom: 2.2em;
-    }
-    @media (max-width: 900px) {
-      .about-us-flex { flex-direction: column; gap: 1.2em; }
-      .about-card { min-width: 0; max-width: 100%; }
-      .site-title { font-size: 2.8em; }
-    }
-    @media (max-width: 700px) {
-      .site-title { font-size: 1.5em; }
-    }
     .about-hero-box {
       background: linear-gradient(120deg, #093154 62%, #13a05a 100%);
       border-radius: 18px;
@@ -97,17 +87,13 @@
       border: none;
     }
     .about-hero-title {
-      font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 2.3em;
       font-weight: 900;
       color: #b5e6d3;
       letter-spacing: 0.07em;
       margin-bottom: 0.8em;
       text-shadow: 0 2px 12px #093154cc;
-    }
-    .about-hero-box span {
-      color: #13a05a;
-      font-weight: 700;
     }
     .about-hero-intro {
       font-family: 'Roboto', Arial, sans-serif;
@@ -123,12 +109,19 @@
       color: #5ef7b2;
       background: none;
       font-weight: 700;
-      font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 1.05em;
       display: inline-block;
       letter-spacing: 0.01em;
       text-shadow: 0 0 8px #5ef7b233, 0 1px 8px #09315433;
       margin: 0.5em 0;
+    }
+    .about-us-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2em;
+      justify-content: space-between;
+      margin-bottom: 2.2em;
     }
     .about-card {
       flex: 1 1 500px;
@@ -152,7 +145,7 @@
       color: #5ef7b2;
       margin-bottom: 0.45em;
       letter-spacing: 0.07em;
-      font-family: 'Oswald', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       text-shadow: 0 1px 8px #5ef7b266;
     }
     .about-card.specialized-expertise p {
@@ -167,7 +160,7 @@
     .about-card.specialized-expertise span {
       color: #5ef7b2;
       font-weight: 900;
-      font-family: 'Oswald', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 1.07em;
     }
     .empowerment-glow {
@@ -185,7 +178,6 @@
       padding: 0.09em 0;
       text-align: center;
     }
-    /* --- Mission Box --- */
     .mission-box {
       background: #093154;
       border-radius: 22px;
@@ -198,7 +190,7 @@
       position: relative;
     }
     .mission-heading {
-      font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 2em;
       color: #5ef7b2;
       font-weight: 900;
@@ -232,7 +224,7 @@
     .mission-brand {
       color: #00f0ff;
       font-weight: 900;
-      font-family: 'Oswald', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       letter-spacing: 0.05em;
     }
     .about-cta-btn {
@@ -265,6 +257,14 @@
       font-size: 1.02em;
       font-family: 'Montserrat', Arial, sans-serif;
     }
+    @media (max-width: 900px) {
+      .site-title { font-size: 2.8em; }
+      .about-us-flex { flex-direction: column; gap: 1.2em; }
+      .about-card { min-width: 0; max-width: 100%; }
+    }
+    @media (max-width: 700px) {
+      .site-title { font-size: 1.5em; }
+    }
   </style>
 </head>
 <body>
@@ -281,7 +281,6 @@
   </header>
   <main>
     <div class="about-container">
-
       <!-- About Us Section Start -->
       <section class="about-hero-box">
         <div class="about-hero-title">Practical. Proactive. Local.</div>
@@ -292,7 +291,6 @@
           From stormwater and air quality to workplace hazard evaluations, our technical expertise and real-world experience set us apart.
         </div>
       </section>
-
       <div class="about-us-flex">
         <div class="about-card specialized-expertise">
           <h2>Specialized Expertise</h2>
@@ -313,7 +311,6 @@
           </div>
         </div>
       </div>
-
       <div class="mission-box">
         <h2 class="mission-heading">Our Mission</h2>
         <div class="mission-body">
@@ -328,7 +325,6 @@
           </p>
         </div>
       </div>
-
       <div style="text-align:center;">
         <a href="contact.html" class="about-cta-btn">Get in Touch</a>
       </div>
