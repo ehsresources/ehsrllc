@@ -6,6 +6,20 @@
   <title>About Us | EHS Resources, LLC</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      background: linear-gradient(120deg, #0a3c75 0%, #0197a6 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav {
+      background: #093154;
+      color: #eaf0f6;
+      box-shadow: 0 4px 22px rgba(7,26,44,0.35);
+      padding: 12px 0 4px 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
     .site-title {
       color: #13a05a;
       font-weight: 900;
@@ -13,13 +27,272 @@
       letter-spacing: 0.14em;
       margin: 0.4em 0 0.1em 0;
       text-align: center;
-      font-family: 'Arial Black', Arial, sans-serif;
-      background: none !important;
-      text-shadow: 0 0 3px #13a05a33;
+      font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+      text-shadow: none;
     }
-    @media (max-width: 900px) {.site-title { font-size: 2.8em; }}
-    @media (max-width: 700px) {.site-title { font-size: 1.5em; }}
-    /* ...rest of your styles... */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.4em;
+      padding: 0;
+      margin: 10px 0 10px 0;
+    }
+    nav ul li a {
+      display: inline-block;
+      font-size: 1.18em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      background: linear-gradient(90deg, #5ef7b2 0%, #00ff7b 100%);
+      color: #093154;
+      padding: 0.6em 1.7em;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px #5ef7b226, 0 1px 2px #00ff7b22;
+      border: none;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
+      position: relative;
+      z-index: 1;
+    }
+    nav ul li a.active,
+    nav ul li a:focus,
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #00ff7b 0%, #5ef7b2 100%);
+      color: #093154;
+      box-shadow: 0 3px 14px #5ef7b299, 0 1px 8px #00ff7b44;
+      transform: scale(1.04);
+      outline: none;
+      text-shadow: none;
+    }
+    .about-container {
+      max-width: 1100px;
+      margin: 2.7rem auto;
+      padding: 0 1.2rem;
+    }
+    /* Top card styling */
+    .about-hero {
+      background: linear-gradient(105deg, #093154 65%, #01bfa6 100%);
+      border-radius: 22px 22px 0 0;
+      box-shadow: 0 2px 12px #00f0ff22;
+      padding: 2.2rem 1.8rem 1.3rem 1.8rem;
+      margin-bottom: 0;
+      text-align: left;
+      color: #eaf0f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-content-box {
+      background: linear-gradient(135deg, #00f0ff15 60%, #5ef7b215 100%);
+      border-left: 8px solid #00f0ff;
+      box-shadow: 0 2px 12px #00f0ff22;
+      border-radius: 16px;
+      padding: 2em 1.6em 1.7em 1.6em;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content-box h2 {
+      font-size: 2em;
+      font-weight: 900;
+      color: #00f0ff;
+      margin-bottom: 0.25em;
+      letter-spacing: 0.08em;
+      background: none;
+      text-shadow: none;
+    }
+    .hero-content-box p {
+      font-size: 1.13em;
+      color: #eaf0f6;
+      line-height: 1.7;
+      font-weight: 500;
+      margin: 0 0 0.8em 0;
+    }
+    .hero-content-box span {
+      color: #5ef7b2;
+      font-weight: 700;
+    }
+    /* Section Titles */
+    .about-section-title {
+      color: #00f0ff;
+      font-size: 1.7em;
+      font-weight: 900;
+      border-left: 9px solid #5ef7b2;
+      padding-left: 0.7em;
+      letter-spacing: 0.09em;
+      margin-top: 2.1em;
+      margin-bottom: 0.7em;
+      background: none;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      text-shadow: none;
+    }
+    /* What Sets Us Apart Cards */
+    .about-apart-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      margin: 2em 0 1.5em 0;
+      position: relative;
+      z-index: 2;
+    }
+    .apart-card {
+      flex: 1 1 370px;
+      min-width: 270px;
+      max-width: 490px;
+      background: linear-gradient(120deg, #00f0ff12 70%, #5ef7b212 100%);
+      border-left: 9px solid #5ef7b2;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #00f0ff44;
+      padding: 1.4em 1.1em 1.1em 1.5em;
+      margin-bottom: 0;
+      position: relative;
+      text-align: left;
+      color: #fff;
+      font-size: 1.08em;
+      font-weight: 600;
+      z-index: 2;
+      overflow: hidden;
+      transition: box-shadow 0.16s, transform 0.12s;
+    }
+    .apart-card h2 {
+      color: #00f0ff;
+      font-size: 1.18em;
+      font-weight: 900;
+      margin-bottom: 0.18em;
+      letter-spacing: 0.07em;
+      text-shadow: none;
+      background: none;
+    }
+    .apart-card:hover {
+      box-shadow: 0 8px 28px #00f0ff55, 0 2px 10px #13a05a44;
+      transform: scale(1.02);
+      z-index: 3;
+    }
+    /* Mission Box */
+    .about-mission-box {
+      background: linear-gradient(90deg, #00f0ff 18%, #0197a6 90%);
+      color: #fff;
+      border-left: 10px solid #093154;
+      border-radius: 18px;
+      padding: 1.6em 1.3em 1.3em 1.8em;
+      margin: 2.2em auto 2em auto;
+      font-size: 1.18em;
+      font-weight: 700;
+      box-shadow: 0 3px 18px #00f0ff33;
+      text-shadow: none;
+      max-width: 800px;
+      text-align: center;
+      position: relative;
+      z-index: 3;
+      border-top: 1px solid #5ef7b2;
+      border-bottom: 1px solid #5ef7b2;
+      overflow: hidden;
+    }
+    .about-mission-box strong {
+      font-size: 1.13em;
+      color: #093154;
+      letter-spacing: 0.03em;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 0.5em;
+      padding-top: 0.2em;
+      background: none;
+      text-shadow: none;
+    }
+    .about-mission-box .mission-points {
+      text-align: left;
+      margin: 1em auto 1em auto;
+      display: inline-block;
+      padding: 0 1em;
+    }
+    .about-mission-box .mission-points li {
+      padding-bottom: 0.5em;
+      color: #fff;
+      font-size: 1.09em;
+      font-weight: 600;
+      list-style: disc inside;
+      text-shadow: none;
+    }
+    .about-mission-box .mission-footer {
+      margin-top: 1em;
+      font-weight: 700;
+      color: #093154;
+      font-size: 1.07em;
+      text-shadow: none;
+      background: none;
+    }
+    .about-maincard {
+      background: #172b3d;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 18px #0197a633;
+      padding: 2.1rem 1.8rem 2rem 1.8rem;
+      margin-bottom: 2em;
+      color: #eaf0f6;
+      position: relative;
+      z-index: 0;
+      overflow: visible;
+    }
+    .about-cta {
+      text-align: center;
+      margin-top: 2.2em;
+    }
+    .about-cta-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #00f0ff 0%, #5ef7b2 100%);
+      color: #093154;
+      padding: 1em 2.6em;
+      border-radius: 12px;
+      font-size: 1.09em;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      margin-top: 0.7em;
+      box-shadow: 0 2px 8px #00f0ff33;
+      border: none;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    }
+    .about-cta-btn:hover, .about-cta-btn:focus {
+      background: linear-gradient(90deg, #5ef7b2 0%, #00f0ff 100%);
+      color: #093154;
+      box-shadow: 0 4px 16px #5ef7b2cc;
+    }
+    @media (max-width: 900px) {
+      .about-apart-row {
+        flex-direction: column;
+        gap: 1.1em;
+      }
+      .apart-card {
+        margin-bottom: 0.9em;
+      }
+      .about-mission-box {
+        margin-top: 1.3em;
+      }
+      .about-maincard { padding: 1.3em 0.7em 1.2em 0.7em; }
+      .about-container { padding: 0 0.7em; }
+      .about-hero { padding: 1.2rem 0.7rem 0.8rem 0.7rem;}
+      .hero-content-box { padding: 1.2em 1em 1em 1em; }
+    }
+    @media (max-width: 700px) {
+      .about-container { padding: 0 0.2em;}
+      .about-hero { padding: 1.2rem 0.4rem 0.8rem 0.4rem;}
+      .about-maincard { padding: 1.1em 0.4em 1.2em 0.4em;}
+      .hero-content-box { min-width: 90vw; max-width: 98vw; padding: 1.2em 0.7em 1em 0.7em;}
+      .about-section-title { font-size: 1.2em; }
+      .apart-card { min-width: 90vw; max-width: 98vw; }
+    }
+    footer {
+      margin-top: 2.5rem;
+      background: none;
+      color: #eaf0f6;
+      border-top: 2px solid #5ef7b2;
+    }
   </style>
 </head>
 <body>
@@ -34,6 +307,52 @@
       </ul>
     </nav>
   </header>
-  <!-- ...about page content... -->
+  <main>
+    <div class="about-container">
+
+      <section class="about-hero">
+        <div class="hero-content-box">
+          <h2>Practical. Proactive. Local.</h2>
+          <p>
+            At EHS Resources, LLC, we deliver solutions that help organizations meet environmental, health, and safety responsibilities with confidence.<br>
+            <span>Founded in Florida</span>, we tailor consulting and training to the unique needs of your industry—because compliance and safety are never one-size-fits-all.<br>
+            We focus on targeted assessments, hands-on training, and actionable programs so your business can protect its workforce, safeguard communities, and keep up with evolving regulations.<br>
+            From stormwater and air quality to workplace hazard evaluations, our technical expertise and real-world experience set us apart.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-maincard">
+        <div class="about-section-title">What Sets Us Apart</div>
+        <div class="about-apart-row">
+          <div class="apart-card">
+            <h2>Specialized Expertise, Flexible Model</h2>
+            Our flexible model combines in-house expertise with a network of specialized professionals engaged on a project-by-project basis. This ensures that every client receives the right knowledge and certifications for the job, without unnecessary overhead or generic "off-the-shelf" solutions.
+          </div>
+          <div class="apart-card">
+            <h2>Empowerment, Not Dependency</h2>
+            Even more importantly, we want to help you become self-sufficient. The programs, procedures, assessments, results, and material we create for you are all yours at the completion of the project. We believe in empowering our clients, not locking them into ongoing dependency.
+          </div>
+        </div>
+        <div class="about-mission-box">
+          <strong>Our Mission</strong>
+          <ul class="mission-points">
+            <li>Protect people by identifying and reducing workplace risks.</li>
+            <li>Preserve the environment by guiding companies toward sustainable, compliant practices.</li>
+            <li>Provide value through clear, actionable guidance that strengthens operations rather than complicates them.</li>
+          </ul>
+          <div class="mission-footer">
+            Whether you need a customized training program, a detailed sampling plan, or a comprehensive safety audit, <span style="color:#00f0ff;font-weight:900;">EHS Resources, LLC</span> is your partner in building safer, more resilient workplaces.
+          </div>
+        </div>
+        <div class="about-cta">
+          <a href="contact.html" class="about-cta-btn">Get in Touch</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 EHS Resources, LLC. All rights reserved.
+  </footer>
 </body>
 </html>
